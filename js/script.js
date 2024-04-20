@@ -1,18 +1,18 @@
-let password = " ";
-
 let input = document.querySelector("#input");
 let sumit = document.querySelector("#submit");
-sumit.addEventListener('click', function (e) {
-     e.preventDefault();
-    for (let i = 0; i < 9; i++) {
-        let number = Math.floor(Math.random() * (127 - 32) + 32);
-        let char = String.fromCharCode(number);
-        password += char;
-    }
+let new_pass = document.querySelector("#new");
 
-    if (input.value === "") {
-        input.value += `${password}`;
-    }
- 
+function gp() {
+  let password = " ";
+  for (let i = 0; i < 9; i++) {
+    let number = Math.floor(Math.random() * (127 - 32) + 32);
+    let char = String.fromCharCode(number);
+    password += char;
+  }
+  input.value = password;
 }
- )
+
+sumit.addEventListener("click", function (e) {
+  e.preventDefault();
+  gp();
+});

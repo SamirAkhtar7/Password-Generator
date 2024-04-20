@@ -65,7 +65,7 @@ img {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50px;
 }
-#submit {
+#submit,#new {
   margin: 10px;
   padding: 10px;
   color: #3D0A5C;
